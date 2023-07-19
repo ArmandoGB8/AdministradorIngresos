@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Inicio de sesión - Kago</title>
+    <!-- meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+    <link href="css/login.css" rel="stylesheet" type="text/css" />
+    <link href="css/fontawesome-all.css" rel="stylesheet" />
+    <script src="js/main.js"></script>
+</head>
+
+
+<body>
+    <h1>Kago</h1>
+    <div class=" w3l-login-form">
+        <h2>Inicio de sesión</h2>
+        <form action="Login" method="post">
+
+            <div class=" w3l-form-group">
+                <label>Nombre de usuario:</label>
+                <div class="group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" class="form-control" placeholder="Usuario" required="required" name="dinosaurio" maxlength="20" minlength="2" onKeyPress="return validarnAlphanum(event)" onPaste="return false;" ondragend="arrastrar(event)" ondrag="arrastrar(event)" ondragover="arrastrar(event)" ondragstart="arrastrar(event)" ondrop="arrastrar(event)"/>
+                </div>
+            </div>
+            <div class=" w3l-form-group">
+                <label>Contraseña:</label>
+                <div class="group">
+                    <i class="fas fa-unlock"></i>
+                    <input type="password" class="form-control" placeholder="Contraseña" required="required" name="pass" maxlength="20" minlength="4" onKeyPress="return validarnAlphanum(event)" onPaste="return false;" ondragend="arrastrar(event)" ondrag="arrastrar(event)" ondragover="arrastrar(event)" ondragstart="arrastrar(event)" ondrop="arrastrar(event)"/>
+                </div>
+            </div>
+            <button type="submit" onclick="validarusuario">Iniciar sesión</button>
+        </form>
+        <p class=" w3l-register-p">¿Aún no tienes una cuenta?<a href="register.html" class="register"> Regístrate</a></p>
+    </div>
+    <footer>
+    </footer>
+<script>
+          function arrastrar(event){
+              event.preventDefault();
+          }
+          function validarnAlpha(e){
+  
+              var teclado=(document.all)?e.keyCode:e.which;
+  
+              var patron=/[aA-zZ]+/;
+  
+              var tec=String.fromCharCode(teclado);
+  
+              return patron.test(tec);
+          }
+          function validarnAlphanum(e){
+  
+              var teclado=(document.all)?e.keyCode:e.which;
+  
+              var patron=/[aA-zZ0-9]+/;
+  
+              var tec=String.fromCharCode(teclado);
+  
+              return patron.test(tec);
+          }
+
+      </script>
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
